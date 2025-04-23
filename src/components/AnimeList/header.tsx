@@ -2,8 +2,8 @@ import Link from "next/link";
 
 interface HeaderProps {
   title: string;
-  linkTitle: string;
-  linkHref: string;
+  linkTitle?: string;
+  linkHref?: string;
 }
 
 const Header = ({ title, linkTitle, linkHref }: HeaderProps) => {
@@ -14,9 +14,11 @@ const Header = ({ title, linkTitle, linkHref }: HeaderProps) => {
           {title}
         </h1>
       </div>
-      <div className="flex items-center font-semibold hover:text-amber-600 hover:bg-amber-50 transition-all w-fit px-3 md:text-lg text-sm bg-amber-600 font-semibold rounded-xl text-amber-50">
-        <Link href={linkHref}>{linkTitle}</Link>
-      </div>
+      {typeof linkHref === "string" && typeof linkTitle === "string" && (
+        <div className="flex items-center font-semibold hover:text-amber-600 hover:bg-amber-50 transition-all w-fit px-3 md:text-lg text-sm bg-amber-600 rounded-xl text-amber-50">
+          <Link href={linkHref}>{linkTitle}</Link>
+        </div>
+      )}
     </div>
   );
 };

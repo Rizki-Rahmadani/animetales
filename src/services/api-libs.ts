@@ -14,6 +14,14 @@ export const getAnimeSeasonNow = async () => {
   return anime;
 };
 
+export const getSearchAnime = async (keyword: string) => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${keyword}`
+  );
+  const searchAnime = await response.json();
+  return searchAnime;
+};
+
 export const getAnimeRecommended = async () => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/recommendations/anime`

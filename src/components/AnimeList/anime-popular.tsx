@@ -3,10 +3,7 @@ import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import { GrStatusGood } from "react-icons/gr";
 import ClientSwiper from "../ClientSwiper";
-
-export interface animeProps {
-  api: any;
-}
+import { animeProps } from "../Types/api-type";
 
 const AnimePopular = ({ api }: animeProps) => {
   return (
