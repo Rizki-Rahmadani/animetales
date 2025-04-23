@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Danfo&family=Mochiy+Pop+One&family=Rubik+Glitch+Pop&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #8aa3be;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-pagination {
+  margin-top: 0.5rem !important;
+  position: relative !important;
+}
+
+.rubik-regular {
+  font-family: "Rubik";
+  font-weight: 800;
+  font-style: "normal";
+}
+
+.winky-sans-title {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.transparent-image-container {
+  position: relative;
+  display: inline-block;
+  background-color: #bdd3ec;
+  /* Warna background */
+}
+
+.transparent-image {
+  /* Reverse gradient: kanan & atas menjadi transparan */
+  -webkit-mask-image: radial-gradient(
+    at right top,
+    rgba(0, 0, 0, 1) 28%,
+    rgba(0, 0, 0, 0) 72%
+  );
+  mask-image: radial-gradient(
+    at right top,
+    rgba(0, 0, 0, 1) 28%,
+    rgba(0, 0, 0, 0) 72%
+  );
+}
