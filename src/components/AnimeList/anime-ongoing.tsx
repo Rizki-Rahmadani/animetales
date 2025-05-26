@@ -5,7 +5,7 @@ import { animeProps } from "../Types/api-type";
 
 const AnimeOnGoing = ({ api }: animeProps) => {
   return (
-    <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 grid-cols-2 gap-5 md:px-10 px-1">
+    <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 grid-cols-2 gap-5 md:px-10 px-1">
       {api ? (
         api.map((data: any) => (
           <div key={`${data.mal_id}`} className="shadow-xl p-3 rounded-md">

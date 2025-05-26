@@ -14,10 +14,15 @@ const Navbar = () => {
               fontStyle: "normal",
             }}
           >
-            <span className="text-amber-600 border-b-2 border-l-2 border-t-2 border-b-background border-l-background border-t-background rounded-l-xl p-1 ">
+            {/* <span className="text-amber-600 border-b-2 border-l-2 border-t-2 border-b-background border-l-background border-t-background rounded-l-xl p-1 ">
               ANIME
+            </span> */}
+            <span className="text-amber-600 ">
+              <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-amber-600">
+                <span className="relative text-white">ANIME</span>
+              </span>{" "}
+              TALES
             </span>
-            TALES
           </h1>
         </Link>
         <Search />

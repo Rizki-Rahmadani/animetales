@@ -30,30 +30,38 @@ const Home = async () => {
       {/* <div className="w-screen h-screen">
         <AnimeWatchCarousel data={animeWatchEpisodes.data} />
       </div> */}
+      <div className="flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col w-full md:w-3/4">
+          <div>
+            {/* Anime Populer */}
+            <section>
+              <div className="m-3 p-3 bg-[#bdd3ec] rounded-md">
+                <Header
+                  title="Anime Populer"
+                  linkHref="/populer"
+                  linkTitle="View All"
+                />
+                <AnimePopular api={animePopular} />
+              </div>
+            </section>
 
-      {/* Anime Populer */}
-      <section>
-        <div className="m-3 p-3 bg-[#bdd3ec] rounded-md">
-          <Header
-            title="Anime Populer"
-            linkHref="/populer"
-            linkTitle="View All"
-          />
-          <AnimePopular api={animePopular} />
+            {/* Anime onGoing */}
+            <section>
+              <div className="m-3 p-3 bg-[#bdd3ec] rounded-md">
+                <Header
+                  title="Anime OnGoing"
+                  linkHref="/ongoing"
+                  linkTitle="View All"
+                />
+                <AnimeOnGoing api={uniqueAnime} />
+              </div>
+            </section>
+          </div>
         </div>
-      </section>
-
-      {/* Anime onGoing */}
-      <section>
-        <div className="m-3 p-3 bg-[#bdd3ec] rounded-md">
-          <Header
-            title="Anime OnGoing"
-            linkHref="/ongoing"
-            linkTitle="View All"
-          />
-          <AnimeOnGoing api={uniqueAnime} />
+        <div className="bg-[#bdd3ec] md:w-full m-3 p-3 rounded-md">
+          <p>Topics</p>
         </div>
-      </section>
+      </div>
       <FooterAnime />
     </>
   );

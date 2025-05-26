@@ -1,7 +1,3 @@
 const Anime = () => {
-  return (
-    <>
-      <div></div>
-    </>
-  );
+  return <></>;
 };

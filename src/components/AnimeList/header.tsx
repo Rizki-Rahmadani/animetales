@@ -10,7 +10,7 @@ const Header = ({ title, linkTitle, linkHref }: HeaderProps) => {
   return (
     <div className="md:px-10 px-1 pb-3 flex justify-between border-b ">
       <div>
-        <h1 className="w-fit p-2 md:text-xl text-sm font-semibold rounded-xl">
+        <h1 className="w-fit p-2 md:text-2xl text-base font-extrabold rounded-xl tracking-wide font-[Montserrat]">
           {title}
         </h1>
       </div>
